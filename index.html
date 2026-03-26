@@ -3,13 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GMOBIL - Automação de Força de Vendas</title>
+    <meta name="description" content="Sofware de Automação de Força de Vendas para o setor da moda e outros" />
+    <meta name="title" content="GMOBIL - Nosso Foco é Movimentar Suas Vendas" />
+    <title>GMOBIL - Nosso Foco é Movimentar Suas Vendas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="favicon icon"
       type="image/x-icon"
       href="imagens/favicon-50x50.png"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+       <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Gmobil",
+      "url": "https://www.gmobil.com.br"
+      "alternateName": "Gmobil"
+    }
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -1196,7 +1211,7 @@
       }
       .footer-links a {
         font-size: 0.78rem;
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.5);
         font-weight: 700;
         transition: color 0.2s;
       }
@@ -1205,7 +1220,7 @@
       }
       .footer-copy {
         font-size: 0.75rem;
-        color: rgba(255, 255, 255, 0.22);
+        color: rgba(255, 255, 255, 0.5);
       }
       .footer-social {
         display: flex;
@@ -1216,7 +1231,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: rgba(255, 255, 255, 0.35);
+        color: rgba(255, 255, 255, 0.5);
         transition: color 0.2s;
       }
       .social-link:hover {
@@ -1454,9 +1469,9 @@
     <section class="hero" id="inicio">
       <div class="hero-bg-r"></div>
       <div class="hero-left">
-        <div class="hero-tag">
+        <!-- <div class="hero-tag">
           <span class="dot"></span>Automação de Força de Vendas
-        </div>
+        </div> -->
         <h1>
           Nosso foco é<br /><span class="grad-text"
             >movimentar<br />as suas vendas</span
@@ -2030,8 +2045,7 @@
           Algumas Marcas que <span class="grad-text">Confiam</span> na GMOBIL
         </h2>
         <p class="sec-desc">
-          Grandes marcas do setor da moda e varejo aprovam nossos produtos e
-          serviços.
+          Grandes marcas do setor da moda e varejo aprovam nossos produtos e serviços. Atendemos Clientes de diversos portes e segmentos, sempre com o mesmo compromisso de excelência e resultados.
         </p>
       </div>
       <div class="logos reveal" id="clientes-logos"></div>
@@ -2125,9 +2139,13 @@
         ><a href="#clientes">Clientes</a><a href="#contato">Contato</a>
       </div>
       <div class="footer-copy">
-        © 2026 GMOBIL. Todos os direitos reservados. &nbsp;·&nbsp;
-        <a
-          href="./privacy/privacy.html"
+        © <span id="footer-year"></span> GMOBIL. Todos os direitos reservados.
+       <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+      </div>
+
+      <div class="footer-copy">
+      <a
+          href="politica-privacidade/index.html"
           style="
             color: inherit;
             text-decoration: underline;
@@ -2774,15 +2792,18 @@
           <button class="modal-close" onclick="closeModal(document.getElementById('modal-demo'))">&#x2715;</button>
         </div>
 
-        <form class="modal-form" id="demo-form" onsubmit="submitDemoForm(event)">
+        <script type="text/javascript">
+            (function(){emailjs.init({publicKey:"uYfnlksCUO2B7Zgm7"});})();document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("demo-form");e&&e.addEventListener("submit",function(t){t.preventDefault(),emailjs.sendForm("service_gm","template_gmobil",this).then(()=>{e.style.display="none";const s=document.getElementById("demo-success");if(s)s.style.display="flex";}).catch(t=>alert("Erro: "+JSON.stringify(t)))})});</script>
+            
+        <form class="modal-form" id="demo-form">
           <div class="form-row">
             <div class="form-group">
               <label for="df-nome">Seu Nome *</label>
-              <input id="df-nome" name="nome" type="text" placeholder="Seu nome" required />
+              <input id="df-nome" name="name" type="text" placeholder="Seu nome" required />
             </div>
             <div class="form-group">
               <label for="df-empresa">Nome da Empresa *</label>
-              <input id="df-empresa" name="empresa" type="text" placeholder="Nome da empresa" required />
+              <input id="df-empresa" name="company" type="text" placeholder="Nome da empresa" required />
             </div>
           </div>
           <div class="form-row">
@@ -2792,12 +2813,12 @@
             </div>
             <div class="form-group">
               <label for="df-telefone">Telefone</label>
-              <input id="df-telefone" name="telefone" type="tel" placeholder="(00) 00000-0000" />
+              <input id="df-telefone" name="phone" type="tel" placeholder="(00) 00000-0000" />
             </div>
           </div>
           <div class="form-group">
             <label for="df-mensagem">Mensagem</label>
-            <textarea id="df-mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre sua necessidade..."></textarea>
+            <textarea id="df-mensagem" name="message" rows="4" placeholder="Conte um pouco sobre sua necessidade..."></textarea>
           </div>
           <button type="submit" class="form-submit">Enviar Mensagem</button>
         </form>
