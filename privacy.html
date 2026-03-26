@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade — GMOBIL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="favicon icon" type="image/x-icon" href="imagens/favicon-50x50.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --coral: #f26241;
+        --orange: #f7a33b;
+        --navy: #1b2a4a;
+        --white: #ffffff;
+        --off: #f8f6f3;
+        --muted: #6b7a99;
+        --border: rgba(27, 42, 74, 0.1);
+        --shadow: 0 4px 24px rgba(27, 42, 74, 0.1);
+        --radius: 12px;
+        --grad: linear-gradient(120deg, #f26241 0%, #f7a33b 100%);
+      }
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Nunito Sans", sans-serif;
+        color: var(--navy);
+        background: var(--white);
+        overflow-x: hidden;
+      }
+      img { display: block; max-width: 100%; }
+      a { text-decoration: none; color: inherit; }
+
+      /* NAV */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 0 8vw;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-logo img { height: 28px; }
+      .nav-back {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--muted);
+        transition: color 0.2s;
+      }
+      .nav-back:hover { color: var(--coral); }
+
+      /* HERO STRIP */
+      .page-hero {
+        background: var(--navy);
+        padding: 4rem 8vw 3.5rem;
+      }
+      .page-hero-tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--coral);
+        background: rgba(242, 98, 65, 0.12);
+        border: 1px solid rgba(242, 98, 65, 0.25);
+        border-radius: 999px;
+        padding: 0.3rem 0.9rem;
+        margin-bottom: 1.2rem;
+      }
+      .page-hero h1 {
+        font-family: "Nunito", sans-serif;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-weight: 800;
+        color: var(--white);
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+      }
+      .page-hero-sub {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* CONTENT */
+      .privacy-wrap {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 4rem 8vw 5rem;
+      }
+      .privacy-section {
+        margin-bottom: 2.8rem;
+      }
+      .privacy-section h2 {
+        font-family: "Nunito", sans-serif;
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 0.9rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 2px solid var(--border);
+      }
+      .privacy-section p {
+        font-size: 0.93rem;
+        line-height: 1.8;
+        color: var(--muted);
+        margin-bottom: 0.9rem;
+      }
+      .privacy-section p:last-child { margin-bottom: 0; }
+      .privacy-section a {
+        color: var(--coral);
+        font-weight: 600;
+      }
+      .privacy-section a:hover { text-decoration: underline; }
+
+      /* FOOTER */
+      footer {
+        background: var(--navy);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 2.4rem 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+      .footer-logo img { height: 28px; }
+      .footer-copy {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.22);
+      }
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.35);
+        transition: color 0.2s;
+      }
+      .social-link:hover { color: white; }
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <a href="gmobil_landing_v2.html" class="nav-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Voltar ao site
+      </a>
+      <a class="nav-logo" href="gmobil_landing_v2.html">
+        <img src="./imagens/logo-gmobil.png" alt="GMOBIL" />
+      </a>
+    </nav>
+
+    <div class="page-hero">
+      <div class="page-hero-tag">Legal</div>
+      <h1>Política de Privacidade</h1>
+      <p class="page-hero-sub">Última atualização: março de 2026</p>
+    </div>
+
+    <div class="privacy-wrap">
+
+      <div class="privacy-section">
+        <h2>Quem somos</h2>
+        <p>O endereço do nosso site é: <a href="https://gmobil.com.br/">https://gmobil.com.br/</a></p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>Comentários</h2>
+        <p>Quando os visitantes deixam comentários no site, coletamos os dados mostrados no formulário de comentários, além do endereço de IP e de dados do navegador do visitante, para auxiliar na detecção de spam.</p>
+        <p>Uma sequência anonimizada de caracteres criada a partir do seu e-mail (também chamada de hash) poderá ser enviada para o Gravatar para verificar se você usa o serviço. A política de privacidade do Gravatar está disponível aqui: <a href="https://automattic.com/privacy/" target="_blank" rel="noopener">https://automattic.com/privacy/</a>. Depois da aprovação do seu comentário, a foto do seu perfil fica visível publicamente junto de seu comentário.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>Mídia</h2>
+        <p>Se você envia imagens para o site, evite enviar as que contenham dados de localização incorporados (EXIF GPS). Visitantes podem baixar estas imagens do site e extrair delas seus dados de localização.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>Cookies</h2>
+        <p>Ao deixar um comentário no site, você poderá optar por salvar seu nome, e-mail e site nos cookies. Isso visa seu conforto, assim você não precisará preencher seus dados novamente quando fizer outro comentário. Estes cookies duram um ano.</p>
+        <p>Se você tem uma conta e acessa este site, um cookie temporário será criado para determinar se seu navegador aceita cookies. Ele não contém nenhum dado pessoal e será descartado quando você fechar seu navegador.</p>
+        <p>Quando você acessa sua conta no site, também criamos vários cookies para salvar os dados da sua conta e suas escolhas de exibição de tela. Cookies de login são mantidos por dois dias e cookies de opções de tela por um ano. Se você selecionar "Lembrar-me", seu acesso será mantido por duas semanas. Se você se desconectar da sua conta, os cookies de login serão removidos.</p>
+        <p>Se você editar ou publicar um artigo, um cookie adicional será salvo no seu navegador. Este cookie não inclui nenhum dado pessoal e simplesmente indica o ID do post referente ao artigo que você acabou de editar. Ele expira depois de 1 dia.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>Mídia incorporada de outros sites</h2>
+        <p>Artigos neste site podem incluir conteúdo incorporado como, por exemplo, vídeos, imagens, artigos, etc. Conteúdos incorporados de outros sites se comportam exatamente da mesma forma como se o visitante estivesse visitando o outro site.</p>
+        <p>Estes sites podem coletar dados sobre você, usar cookies, incorporar rastreamento adicional de terceiros e monitorar sua interação com este conteúdo incorporado, incluindo sua interação com o conteúdo incorporado se você tem uma conta e está conectado com o site.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>Com quem compartilhamos seus dados</h2>
+        <p>Se você solicitar uma redefinição de senha, seu endereço de IP será incluído no e-mail de redefinição de senha.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>Por quanto tempo mantemos os seus dados</h2>
+        <p>Se você deixar um comentário, o comentário e os seus metadados são conservados indefinidamente. Fazemos isso para que seja possível reconhecer e aprovar automaticamente qualquer comentário posterior ao invés de retê-lo para moderação.</p>
+        <p>Para usuários que se registram no nosso site (se houver), também guardamos as informações pessoais que fornecem no seu perfil de usuário. Todos os usuários podem ver, editar ou excluir suas informações pessoais a qualquer momento (só não é possível alterar o seu username). Os administradores de sites também podem ver e editar estas informações.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>Quais os seus direitos sobre seus dados</h2>
+        <p>Se você tiver uma conta neste site ou se tiver deixado comentários, pode solicitar um arquivo exportado dos dados pessoais que mantemos sobre você, inclusive quaisquer dados que nos tenha fornecido. Também pode solicitar que removamos qualquer dado pessoal que mantemos sobre você. Isto não inclui nenhuns dados que somos obrigados a manter para propósitos administrativos, legais ou de segurança.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>Para onde seus dados são enviados</h2>
+        <p>Comentários de visitantes podem ser marcados por um serviço automático de detecção de spam.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footer-logo">
+        <img src="./imagens/logo-gmobil.png" alt="GMOBIL" />
+      </div>
+      <div class="footer-copy">
+        © 2026 GMOBIL Tecnologia. Todos os direitos reservados.
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Facebook" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect width="4" height="12" x="2" y="9"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="X" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4l16 16M20 4 4 20"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+  </body>
+</html>
