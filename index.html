@@ -431,8 +431,10 @@
       }
       .sec-header {
         text-align: center;
-        max-width: 600px;
+        
         margin: 0 auto 3.5rem;
+        width: 100%;
+        box-sizing: border-box;
       }
       .sec-desc {
         color: var(--muted);
@@ -449,6 +451,7 @@
         margin: 0 auto 3.5rem;
         border: 1px solid var(--border);
         gap: 3px;
+        max-width: 600px;
       }
       .tab-btn {
         background: none;
@@ -1356,6 +1359,20 @@
         }
       }
       @media (max-width: 600px) {
+        .sec-header {
+          max-width: 100%;
+          padding: 0 1rem;
+        }
+        .tabs-wrap {
+          width: 100%;
+          flex-wrap: wrap;
+          border-radius: 16px;
+          box-sizing: border-box;
+        }
+        .tab-btn {
+          flex: 1 1 auto;
+          text-align: center;
+        }
         .v-grid {
           grid-template-columns: 1fr;
         }

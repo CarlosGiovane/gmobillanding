@@ -515,6 +515,7 @@ var CONFIG = {
   window.addEventListener(
     "touchmove",
     function (e) {
+      if (!fluidActive) return;
       e.preventDefault();
       var f = CONFIG.TOUCH_FORCE;
       for (var i = 0; i < e.touches.length; i++) {
