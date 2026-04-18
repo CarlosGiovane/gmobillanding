@@ -2819,7 +2819,11 @@
       </div>
     </div>
     <script>
-      function goTab(btn, id) {
+      const TAB_IDS = ['franquias', 'afv', 'bi'];
+      let tabUserInteracted = false;
+      let tabTimer = null;
+
+      function goTab(btn, id, auto) {
         document
           .querySelectorAll(".tab-btn")
           .forEach((b) => b.classList.remove("active"));
@@ -2828,7 +2832,29 @@
           .forEach((p) => p.classList.remove("active"));
         btn.classList.add("active");
         document.getElementById("tab-" + id).classList.add("active");
+        if (!auto) {
+          tabUserInteracted = true;
+          clearInterval(tabTimer);
+        }
       }
+
+      (function startTabCycle() {
+        let idx = 0;
+        tabTimer = setInterval(() => {
+          if (tabUserInteracted) return;
+          idx = (idx + 1) % TAB_IDS.length;
+          const id = TAB_IDS[idx];
+          const btn = document.querySelector(`.tab-btn:nth-child(${idx + 1})`);
+          if (btn) goTab(btn, id, true);
+        }, 10000);
+
+        document.querySelector('.solucoes').addEventListener('click', () => {
+          if (!tabUserInteracted) {
+            tabUserInteracted = true;
+            clearInterval(tabTimer);
+          }
+        });
+      })();
       function openModal(id) {
         document.getElementById(id).classList.add("open");
         document.body.style.overflow = "hidden";
