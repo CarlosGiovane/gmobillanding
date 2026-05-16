@@ -523,6 +523,37 @@
         font-weight: 900;
         margin-top: 0.15rem;
       }
+      .feat-grid {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 2rem;
+        margin-top: 1.4rem;
+      }
+      .feat-grid li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.8rem;
+        background: #f7f9fc;
+        border-radius: 10px;
+        padding: 0.9rem 1rem;
+        border: 1px solid #e8edf5;
+      }
+      .feat-grid h4 {
+        margin: 0 0 0.2rem 0;
+        font-size: 0.93rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .feat-grid p {
+        margin: 0;
+        color: #4a5568;
+        font-size: 0.87rem;
+        line-height: 1.5;
+      }
+      @media (max-width: 640px) {
+        .feat-grid { grid-template-columns: 1fr; }
+      }
       .screens {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -576,7 +607,7 @@
         overflow: hidden;
       }
       .subcard-thumb img {
-        width: 100%;
+        /* width: 100%; */
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s;
@@ -950,19 +981,40 @@
       .modal-feats {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.65rem;
+        gap: 0.7rem;
         margin-bottom: 1.2rem;
       }
       .mf {
         display: flex;
         align-items: flex-start;
-        gap: 0.65rem;
+        gap: 0.7rem;
         font-size: 0.86rem;
         color: var(--navy);
         line-height: 1.5;
+        background: #f7f9fc;
+        border: 1px solid #e8edf5;
+        border-radius: 10px;
+        padding: 0.75rem 0.9rem;
       }
       .mf .chk {
-        margin-top: 0.1rem;
+        margin-top: 0.15rem;
+        flex-shrink: 0;
+      }
+      .mf-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .mf strong {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--navy);
+        display: block;
+      }
+      .mf span.mf-desc {
+        font-size: 0.81rem;
+        color: #4a5568;
+        line-height: 1.45;
       }
       .vantagens {
         padding: 7rem 8vw;
@@ -1733,6 +1785,14 @@
             </li>
           </ul>
         </div>
+        <div class="screens">
+          <div class="sc full">
+            <img
+              src="./imagens_2/b2b-desk.png"
+              alt="Catalogo"
+            />
+          </div>
+        </div>
         <div class="subcards-row">
           <div class="lbl" style="margin-bottom: 0.8rem">
             Conheça cada perfil de uso
@@ -1819,62 +1879,75 @@
       </div>
       <div class="tab-pane" id="tab-afv">
         <div>
-          <div class="lbl">AFV – Automação de Força de Vendas</div>
+          <div class="lbl">B2B Representantes Comerciais</div>
           <h3 class="sec-title" style="font-size: 1.85rem">
-            Sua equipe externa mais poderosa
+            Transforme sua força de vendas em um time altamente produtivo
           </h3>
           <p class="sec-desc">
-            Aplicativo integrado ao ERP que automatiza toda a operação de vendas
-            externas.
+            Potencialize sua operação comercial com um aplicativo integrado ao seu ERP, que simplifica processos, aumenta a produtividade e impulsiona suas vendas externas
           </p>
-          <ul class="feat-list">
+          
+           <h3 class="sec-title" style="font-size: 1.85rem; margin-top: 1rem;">
+            Tudo o que sua equipe precisa, em um só lugar:
+          </h3>
+          <ul class="feat-grid">
             <li>
-              <span class="chk">✓</span>Aplicativo para Android, iOS e Windows
+              <span class="chk">✓</span>
+              <div>
+                <h4>Multiplataforma completa</h4>
+                <p>Disponível para Android, iOS e Windows — venda de onde estiver, com total mobilidade.</p>
+              </div>
             </li>
             <li>
-              <span class="chk">✓</span>Catálogo digital com fotos de alta
-              resolução
+              <span class="chk">✓</span>
+              <div>
+                <h4>Catálogo digital inteligente</h4>
+                <p>Apresente seus produtos com imagens de alta qualidade e informações organizadas para encantar seus clientes.</p>
+              </div>
             </li>
             <li>
-              <span class="chk">✓</span>Dashboards com resultados e dados
-              financeiros por cliente
+              <span class="chk">✓</span>
+              <div>
+                <h4>Roteirização e controle de visitas</h4>
+                <p>Check-in geolocalizado, roteirização de clientes e histórico com mapa integrado para mais produtividade em campo.</p>
+              </div>
             </li>
             <li>
-              <span class="chk">✓</span>Check-in e controle de visitas
-              geolocalizado
+              <span class="chk">✓</span>
+              <div>
+                <h4>Venda mesmo sem internet</h4>
+                <p>Funciona offline com sincronização automática, garantindo que sua operação nunca pare.</p>
+              </div>
             </li>
-            <li>
-              <span class="chk">✓</span>Funciona offline com sincronização
-              automática
-            </li>
+             
           </ul>
         </div>
-        <div class="screens">
-          <div class="sc">
-            <img src="./imagens/afv-catalogo-screen.jpg" alt="Catálogo AFV" />
-          </div>
-          <div class="sc">
-            <img src="./imagens/afv-pedido-screen.jpg" alt="Pedido AFV" />
+         <div class="screens">
+          <div class="sc full">
+            <img
+              src="./imagens_2/afv-desktop.png"
+              alt="Catalogo"
+            />
           </div>
         </div>
+        
         <div class="subcards-row">
           <div class="lbl" style="margin-bottom: 0.8rem">
-            Detalhes da plataforma AFV
+            Detalhes da plataforma B2B
           </div>
           <div class="subcards">
             <div class="subcard" onclick="openModal('ma10')">
               <div class="subcard-thumb">
                 <img
-                  src="./imagens/afv-app-vendas-externas.jpg"
+                  src="./imagens_2/tablet.png"
                   alt="AFV App"
                 />
               </div>
               <div class="subcard-body">
                 <div class="subcard-tag">Visão Geral</div>
-                <div class="subcard-title">Aplicativo de Vendas Externas</div>
+                <div class="subcard-title">Mais eficiência, controle e vendas para sua equipe externa</div>
                 <div class="subcard-desc">
-                  Online e offline, com catálogo, check-in, assinatura digital e
-                  integração com ERP.
+                  Garanta uma operação comercial mais ágil, organizada e segura com um aplicativo completo. Automatize processos, reduza erros e aumente a produtividade da sua equipe de vendas externas.
                 </div>
               </div>
             </div>
@@ -1884,26 +1957,29 @@
               </div>
               <div class="subcard-body">
                 <div class="subcard-tag">Dashboards</div>
-                <div class="subcard-title">Resultados e Dados Financeiros</div>
+                <div class="subcard-title">Acompanhe pedidos e status em tempo real</div>
                 <div class="subcard-desc">
-                  Workflow de aprovação, multi-empresa e tratamento de grade
-                  completo.
+                  Tenha controle total sobre cada pedido da sua operação, do envio ao faturamento. Com informações atualizadas em tempo real, sua equipe ganha agilidade, reduz erros e melhora o atendimento ao cliente.
                 </div>
               </div>
             </div>
             <div class="subcard" onclick="openModal('ma12')">
               <div class="subcard-thumb">
                 <img
-                  src="./imagens/afv-catalogo-produtos.jpg"
+                  src="./imagens/afv_catalogo.png"
                   alt="Catálogo AFV"
+                  style="
+                  
+                    margin: 0 auto 1.2rem;
+                    display: block;
+                  "
                 />
               </div>
               <div class="subcard-body">
                 <div class="subcard-tag">Catálogo</div>
-                <div class="subcard-title">Catálogo de Produtos</div>
+                <div class="subcard-title">Um catálogo digital que vende por você</div>
                 <div class="subcard-desc">
-                  Imagens em alta resolução, variações e condições de preço no
-                  app.
+                  Apresente seus produtos com qualidade profissional e proporcione uma experiência de compra muito mais atrativa, prática e eficiente — tanto no desktop quanto no mobile.
                 </div>
               </div>
             </div>
@@ -1919,12 +1995,10 @@
                 <div class="subcard-wide-body">
                   <div class="subcard-tag">Check-in</div>
                   <div class="subcard-title">
-                    Controle de Visitas com Geolocalização
+                    Controle total das visitas da sua equipe em campo
                   </div>
                   <div class="subcard-desc">
-                    Registre check-in e checkout, selecione o cliente, informe
-                    motivo de não-venda e visualize histórico com mapa
-                    integrado.
+                   Tenha visibilidade completa da rotina dos seus vendedores, com informações precisas, geolocalização e histórico detalhado de cada atendimento.
                   </div>
                 </div>
               </div>
@@ -1936,37 +2010,60 @@
         <div>
           <div class="lbl">Business Intelligence</div>
           <h3 class="sec-title" style="font-size: 1.85rem">
-            Dados que geram decisões
+            Business Intelligence que transforma dados em decisões
           </h3>
           <p class="sec-desc">
-            Nossa equipe de especialistas em Power BI ajuda sua empresa a
-            extrair o máximo valor dos dados com dashboards personalizados.
+            Pare de tomar decisões no escuro. Com dashboards inteligentes e personalizados, você visualiza o que realmente importa e identifica oportunidades de crescimento com rapidez e precisão.
           </p>
+          <p class="sec-desc">
+          Nossa equipe especializada em BI desenvolve análises sob medida, integradas ao seu ERP, para levar mais clareza e performance à sua operação.
+          </p>
+           <h3 class="sec-title" style="font-size: 1.85rem; margin-top: 1rem;">
+            Inteligência que impulsiona resultados
+          </h3>
           <ul class="feat-list">
+           
             <li>
-              <span class="chk">✓</span>Análise de vendas por filial, mês e
-              coleção
+              <span class="chk">✓</span>
+              <div>
+                <h4>Análise completa de vendas</h4>
+                <p>Acompanhe desempenho por filial, período, coleção e identifique tendências com facilidade.</p>
+            </div>
             </li>
             <li>
-              <span class="chk">✓</span>Dashboards de faturamento em tempo real
+              <span class="chk">✓</span>
+              <div>
+                <h4>Dashboards de faturamento em tempo real</h4>
+                <p>Tenha visão atualizada dos resultados e tome decisões com mais agilidade.</p>
+              </div>
             </li>
             <li>
-              <span class="chk">✓</span>Mapa de representantes e desempenho
-              regional
+              <span class="chk">✓</span>
+              <div>
+                <h4>Mapa de representantes e performance regional</h4>
+                <p>Visualize a atuação da sua equipe e identifique regiões com maior potencial de crescimento.</p>
+              </div>
             </li>
             <li>
-              <span class="chk">✓</span>Relatórios customizados por produto e
-              categoria
+              <span class="chk">✓</span>
+              <div>
+                <h4>Relatórios/Visões personalizadas</h4>
+                <p>Crie análises específicas por produto, categoria ou necessidade do seu negócio.</p>
+              </div>
             </li>
             <li>
-              <span class="chk">✓</span>Integração nativa com dados do seu ERP
+              <span class="chk">✓</span>
+              <div>
+                <h4>Integração total com seu ERP</h4>
+                <p>Dados centralizados, confiáveis e sempre atualizados automaticamente.</p>
+              </div>
             </li>
           </ul>
         </div>
         <div class="screens">
-          <div class="sc full">
+           <div class="sc full">
             <img
-              src="./imagens/bi1.jpeg"
+              src="./imagens_2/bi-wide.png"
               alt="Dashboard Power BI"
             />
           </div>
@@ -1978,38 +2075,32 @@
           <div class="bi-flex-row">
             <div class="bi-feature-card">
               <span class="bi-feature-ico">⚙️</span>
-              <div class="bi-feature-title">Inteligência Integrada</div>
+              <div class="bi-feature-title">Inteligência integrada para decisões rápidas</div>
               <p class="bi-feature-desc">
-                Crie elementos visuais em minutos para poder ver o que realmente
-                está acontecendo e capacitar todos a agir.
+                Crie dashboards visuais em poucos minutos e tenha clareza total do que está acontecendo no seu negócio.
               </p>
             </div>
             <div class="bi-feature-card">
               <span class="bi-feature-ico">🚀</span>
-              <div class="bi-feature-title">Novas Oportunidades</div>
+              <div class="bi-feature-title">Descubra novas oportunidades de crescimento</div>
               <p class="bi-feature-desc">
-                Adote e desenvolva novos conjuntos de dados rapidamente para
-                descobrir insights ocultos e impulsionar seus negócios.
+               Explore dados de forma estratégica, identifique padrões ocultos e encontre novas formas de aumentar suas vendas.
               </p>
             </div>
           </div>
           <div class="bi-flex-row">
             <div class="bi-feature-card">
               <span class="bi-feature-ico">📈</span>
-              <div class="bi-feature-title">Análise de dados em tempo real</div>
+              <div class="bi-feature-title">Dados em tempo real, decisões mais assertivas</div>
               <p class="bi-feature-desc">
-                Integre dados do seu ERP e obtenha insights em tempo real.
-                Acompanhe métricas e identifique tendências à medida que
-                acontecem.
+                Integração direta com seu ERP para acompanhar métricas e tendências conforme elas acontecem.
               </p>
             </div>
             <div class="bi-feature-card">
               <span class="bi-feature-ico">📍</span>
-              <div class="bi-feature-title">Análise geográfica das vendas</div>
+              <div class="bi-feature-title">Visão geográfica da sua operação</div>
               <p class="bi-feature-desc">
-                Integrado ao GMOBIL BI, é possível monitorar visualmente o
-                desempenho da sua equipe por regiões, cidades, etc., utilizando
-                recursos disponíveis.
+                Analise o desempenho por região, cidade ou representante e identifique onde estão suas maiores oportunidades.
               </p>
             </div>
           </div>
@@ -2017,22 +2108,18 @@
             <div class="bi-feature-card">
               <div class="bi-feature-ico">🎛️</div>
               <div>
-                <div class="bi-feature-title">Customização e Flexibilidade</div>
+                <div class="bi-feature-title">Totalmente personalizável ao seu negócio</div>
                 <p class="bi-feature-desc">
-                  Personalizável para atender às necessidades específicas de
-                  cada empresa, trazendo o melhor resultado que você pode
-                  esperar.
+                 Adapte dashboards, indicadores e relatórios conforme suas necessidades e objetivos.
                 </p>
               </div>
             </div>
             <div class="bi-feature-card">
               <div class="bi-feature-ico">🔍</div>
               <div>
-                <div class="bi-feature-title">Drill-Down e Filtragem</div>
+                <div class="bi-feature-title">Análise profunda com filtros inteligentes (Drill-Down)</div>
                 <p class="bi-feature-desc">
-                  Filtre como desejar e obtenha informações que permitem uma
-                  análise detalhada dos dados para identificar tendências e
-                  padrões.
+                  Aprofunde-se nos dados, filtre informações e descubra exatamente o que está impulsionando — ou travando — seus resultados.
                 </p>
               </div>
             </div>
@@ -2562,8 +2649,8 @@
       <div class="modal-box">
         <div class="modal-header">
           <div>
-            <div class="modal-tag">B2B Representante (AFV)</div>
-            <div class="modal-title">Aplicativo de Vendas Externas</div>
+            <div class="modal-tag">B2B Representante Comercial</div>
+            <div class="modal-title">Tudo o que você precisa para vender mais</div>
           </div>
           <button
             class="modal-close"
@@ -2574,11 +2661,11 @@
         </div>
         <div class="modal-screen">
           <img
-            src="./imagens/afv-app-vendas-externas.jpg"
+            src="./imagens_2/celular.png"
             alt="AFV App"
             style="
               width: 100%;
-              max-width: 440px;
+              max-width: 240px;
               margin: 0 auto 1.2rem;
               display: block;
               border-radius: 8px;
@@ -2586,40 +2673,34 @@
           />
         </div>
         <div class="modal-body">
-          <p class="modal-desc">
-            Para assegurar uma venda eficiente e segura, disponibilizamos um
-            aplicativo abrangente que se integra ao software de gestão,
-            automatizando os procedimentos da sua equipe de vendas externas.
-          </p>
-          <!-- <img
-            src="./imagens/afv-funcionalidades.jpg"
-            alt="Funcionalidades AFV"
-            style="
-              width: 100%;
-              max-width: 440px;
-              margin: 0 auto 1.2rem;
-              display: block;
-              border-radius: 8px;
-            "
-          /> -->
           <div class="modal-feats">
             <div class="mf">
-              <span class="chk">✓</span>Vendas online e offline
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Venda com ou sem internet</strong>
+                <span class="mf-desc">Sua equipe continua vendendo offline, com sincronização automática — sem perder pedidos.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Catálogo com imagens, variações e preços
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Catálogo digital completo</strong>
+                <span class="mf-desc">Produtos com imagens, variações, preços atualizados e apresentação profissional que facilita a decisão de compra.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Check-in e roteiros de atendimento
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Gestão inteligente de visitas</strong>
+                <span class="mf-desc">Check-in geolocalizado e roteiros de atendimento para mais controle e produtividade em campo.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Assinatura digital integrada
-            </div>
-            <div class="mf">
-              <span class="chk">✓</span>Integração direta com ERP
-            </div>
-            <div class="mf">
-              <span class="chk">✓</span>Android, iOS e Windows
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Assinatura digital integrada</strong>
+                <span class="mf-desc">Pedidos formalizados na hora, com mais segurança e agilidade no fechamento.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2637,9 +2718,9 @@
       <div class="modal-box">
         <div class="modal-header">
           <div>
-            <div class="modal-tag">B2B Representante (AFV)</div>
+            <div class="modal-tag">DashBoards</div>
             <div class="modal-title">
-              Resultados e Dados Financeiros por Cliente
+              Visibilidade completa do ciclo de pedidos
             </div>
           </div>
           <button
@@ -2651,11 +2732,11 @@
         </div>
         <div class="modal-screen">
           <img
-            src="./imagens/afv-dashboards.jpg"
+            src="./imagens_2/dash pedidos.png"
             alt="AFV Dashboards"
             style="
-              width: 100%;
-              max-width: 440px;
+              
+              max-width: 540px;
               margin: 0 auto 1.2rem;
               display: block;
               border-radius: 8px;
@@ -2663,35 +2744,35 @@
           />
         </div>
         <div class="modal-body">
-          <p class="modal-desc">
-            Veja resultados, pedidos e dados financeiros por cliente com
-            dashboards completos. Workflow de aprovação, multi-empresa e
-            tratamento de grade completo.
-          </p>
-          <!-- <img
-            src="./imagens/afv-dashboard-funcionalidades.jpg"
-            alt="Funcionalidades Dashboard"
-            style="
-              width: 100%;
-              max-width: 440px;
-              margin: 0 auto 1.2rem;
-              display: block;
-              border-radius: 8px;
-            "
-          /> -->
+          
           <div class="modal-feats">
             <div class="mf">
-              <span class="chk">✓</span>Online e offline — venda a qualquer hora
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Status atualizado automaticamente</strong>
+                <span>Acompanhe cada pedido com clareza: aguardando faturamento, faturado ou cancelado.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Workflow de Aprovação com regras e
-              limites
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Mais organização e controle</strong>
+                <span>Evite perdas de informação e saiba exatamente em que etapa cada pedido se encontra.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Multi-empresa e Multi-grifes por marca
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Agilidade no atendimento ao cliente</strong>
+                <span>Responda com rapidez e precisão sobre prazos, entregas e andamento dos pedidos. </span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Grade completa com cor e tamanho
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Integração com seu ERP</strong>
+                <span>Todas as atualizações acontecem de forma automática, garantindo dados confiáveis e centralizados.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2709,8 +2790,8 @@
       <div class="modal-box">
         <div class="modal-header">
           <div>
-            <div class="modal-tag">B2B Representante (AFV)</div>
-            <div class="modal-title">Catálogo de Produtos</div>
+            <div class="modal-tag">Catálogo</div>
+            <div class="modal-title">Mais agilidade, mais encantamento, mais vendas</div>
           </div>
           <button
             class="modal-close"
@@ -2721,11 +2802,10 @@
         </div>
         <div class="modal-screen">
           <img
-            src="./imagens/afv-catalogo-produtos.jpg"
+            src="./imagens_2/catalogo desk.png"
             alt="Catálogo AFV Desktop e Mobile"
             style="
-              width: 100%;
-              max-width: 440px;
+              max-width: 540px;
               margin: 0 auto 1.2rem;
               display: block;
               border-radius: 8px;
@@ -2733,29 +2813,41 @@
           />
         </div>
         <div class="modal-body">
-          <p class="modal-desc">
-            Catálogo digital completo com imagens de alta qualidade, disponível
-            no desktop (Windows) e no app mobile (iOS/Android).
-          </p>
           <div class="modal-feats">
             <div class="mf">
-              <span class="chk">✓</span>Busca por produto em tempo real
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Busca inteligente em tempo real</strong>
+                <span>Encontre qualquer produto em segundos e agilize o atendimento.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Imagens em alta resolução com múltiplas
-              fotos
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Imagens de alta qualidade</strong>
+                <span>Exiba fotos nítidas e múltiplos ângulos para valorizar seus produtos e aumentar a conversão.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Favoritar produtos para acesso rápido
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Favoritos para venda rápida</strong>
+                <span>Destaque os produtos mais vendidos ou preferidos para acesso imediato.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Windows e Mobile (iOS/Android)
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Acesso completo em qualquer dispositivo</strong>
+                <span>Utilize o catálogo em qualquer dispositivo, seja desktop ou mobile.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Exportação do catálogo em PDF
-            </div>
-            <div class="mf">
-              <span class="chk">✓</span>Sincronização automática com ERP
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Catálogo em PDF com um clique</strong>
+                <span>Compartilhe facilmente com clientes e facilite a tomada de decisão.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2773,8 +2865,8 @@
       <div class="modal-box">
         <div class="modal-header">
           <div>
-            <div class="modal-tag">B2B Representantes</div>
-            <div class="modal-title">Check-in — Controle de Visitas</div>
+            <div class="modal-tag">Check-in — Controle de Visitas</div>
+            <div class="modal-title">Mais organização, mais produtividade, mais resultado</div>
           </div>
           <button
             class="modal-close"
@@ -2787,33 +2879,54 @@
           <img
             src="./imagens/afv-checkin-visitas.jpg"
             alt="Check-in Controle de Visitas"
-          />
-        </div>
+              style="
+               
+                max-width: 200px;
+                margin: 0 auto 1.2rem;
+                display: block;
+                border-radius: 8px;
+              "
+            />
+          </div>
         <div class="modal-body">
-          <p class="modal-desc">
-            Registre check-in e checkout de visitas com geolocalização,
-            selecione o cliente, informe motivo de não-venda e consulte o
-            histórico completo de atendimentos.
-          </p>
+          
           <div class="modal-feats">
             <div class="mf">
-              <span class="chk">✓</span>Check-in e Checkout com GPS
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Check-in e check-out com geolocalização</strong>
+                <span>Saiba exatamente onde e quando cada visita foi realizada, com total transparência.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Seleção de cliente e motivo de não-venda
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Registro inteligente de visitas</strong>
+                <span>Selecione o cliente atendido e registre o motivo de não-venda para identificar oportunidades de melhoria.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Campo de observações por visita
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Observações detalhadas por atendimento</strong>
+                <span>Centralize informações importantes de cada visita e fortaleça o relacionamento com seus clientes.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Histórico completo de atendimentos
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Histórico completo de atendimentos</strong>
+                <span>Acesse rapidamente todas as interações realizadas com cada cliente.</span>
+              </div>
             </div>
             <div class="mf">
-              <span class="chk">✓</span>Mapa integrado em tempo real
+              <span class="chk">✓</span>
+              <div class="mf-body">
+                <strong>Mapa integrado em tempo real</strong>
+                <span>Visualize a atuação da equipe em campo e otimize deslocamentos.</span>
+              </div>
             </div>
-            <div class="mf">
-              <span class="chk">✓</span>Roteiros de atendimento programados
-            </div>
+           
           </div>
         </div>
       </div>
