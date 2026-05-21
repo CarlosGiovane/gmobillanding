@@ -74,7 +74,8 @@
       }
     ]
     </script>
-    <script type="text/javascript" src="scripts.js" defer></script>
+    <script type="text/javascript" src="scripts.min.js" defer></script>
+    <script type="text/javascript" src="app.min.js" defer></script>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:wght@400;600;700&display=swap" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700&display=swap"
@@ -2440,7 +2441,6 @@
       </div>
       <div class="footer-copy">
         © <span id="footer-year"></span> GMÓBIL. Todos os direitos reservados.
-       <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
       </div>
 
       <div class="footer-copy">
@@ -3078,85 +3078,6 @@
         </div>
       </div>
     </div>
-    <script>
-      const TAB_IDS = ['franquias', 'afv', 'bi'];
-      let tabUserInteracted = false;
-      let tabTimer = null;
-
-      function goTab(btn, id, auto) {
-        document
-          .querySelectorAll(".tab-btn")
-          .forEach((b) => b.classList.remove("active"));
-        document
-          .querySelectorAll(".tab-pane")
-          .forEach((p) => p.classList.remove("active"));
-        btn.classList.add("active");
-        document.getElementById("tab-" + id).classList.add("active");
-        if (!auto) {
-          tabUserInteracted = true;
-          clearInterval(tabTimer);
-        }
-      }
-
-      (function startTabCycle() {
-        let idx = 0;
-        tabTimer = setInterval(() => {
-          if (tabUserInteracted) return;
-          idx = (idx + 1) % TAB_IDS.length;
-          const id = TAB_IDS[idx];
-          const btn = document.querySelector(`.tab-btn:nth-child(${idx + 1})`);
-          if (btn) goTab(btn, id, true);
-        }, 10000);
-
-        document.querySelector('.solucoes').addEventListener('click', () => {
-          if (!tabUserInteracted) {
-            tabUserInteracted = true;
-            clearInterval(tabTimer);
-          }
-        });
-      })();
-      function openModal(id) {
-        document.getElementById(id).classList.add("open");
-        document.body.style.overflow = "hidden";
-      }
-      function closeModal(el) {
-        el.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          document
-            .querySelectorAll(".modal-overlay.open")
-            .forEach((m) => closeModal(m));
-        }
-      });
-      window.addEventListener("scroll", () => {
-        document
-          .getElementById("navbar")
-          .classList.toggle("scrolled", scrollY > 40);
-      });
-      const ham = document.getElementById("ham");
-      const ul = document.querySelector(".nav-links");
-      let open = false;
-      ham.addEventListener("click", () => {
-        open = !open;
-        ul.style.cssText = open
-          ? "display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:white;padding:2rem 6vw;gap:1.4rem;border-bottom:1px solid #eee;box-shadow:0 8px 24px rgba(0,0,0,.08);z-index:199;"
-          : "display:none;";
-      });
-      const obs = new IntersectionObserver(
-        (e) => {
-          e.forEach((x) => {
-            if (x.isIntersecting) {
-              x.target.classList.add("vis");
-              obs.unobserve(x.target);
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-      document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
-    </script>
 
     <div
       class="modal-overlay"
@@ -3215,26 +3136,6 @@
       </div>
     </div>
 
-    <script>
-      function submitDemoForm(e) {
-        e.preventDefault();
-        const form = document.getElementById("demo-form");
-        const success = document.getElementById("demo-success");
-        const data = new FormData(form);
-        const mailto = "comercial@gmobil.com.br";
-        const subject = encodeURIComponent("Solicitação de Demonstração - " + (data.get("empresa") || ""));
-        const body = encodeURIComponent(
-          "Nome: " + data.get("nome") + "\n" +
-          "Empresa: " + data.get("empresa") + "\n" +
-          "E-mail: " + data.get("email") + "\n" +
-          "Telefone: " + (data.get("telefone") || "-") + "\n\n" +
-          "Mensagem:\n" + (data.get("mensagem") || "-")
-        );
-        window.location.href = "mailto:" + mailto + "?subject=" + subject + "&body=" + body;
-        form.style.display = "none";
-        success.style.display = "flex";
-      }
-    </script>
     <canvas id="fluid-canvas"></canvas>
   </body>
 </html>
