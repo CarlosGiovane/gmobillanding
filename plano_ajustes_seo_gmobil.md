@@ -15,24 +15,6 @@ Melhorar:
 
 ---
 
-# 1. AJUSTES PRIORITÁRIOS
-
-## 1.1 Melhorar o `<title>`
-
-### Atual
-
-```html
-<title>GMÓBIL - Nosso Foco é Movimentar Suas Vendas</title>
-```
-
-### Sugestão
-
-```html
-<title>
-GMÓBIL | Software B2B para Força de Vendas e Representantes Comerciais
-</title>
-```
-
 ## Objetivo
 
 Melhorar ranqueamento para:
@@ -42,55 +24,6 @@ Melhorar ranqueamento para:
 - representantes comerciais
 - aplicativo de vendas
 - integração ERP
-
----
-
-# 2. META DESCRIPTION
-
-## Atual
-
-```html
-<meta name="description"
-content="Sofware de Automação de Força de Vendas para o setor da moda e outros" />
-```
-
-## Problemas
-
-- erro de digitação
-- muito curta
-- pouco semântica
-- baixa densidade de keywords
-
-## Sugestão
-
-```html
-<meta
-  name="description"
-  content="Software B2B para representantes comerciais, franquias e indústrias. Plataforma integrada ao ERP com força de vendas, catálogo digital, BI e vendas offline."
-/>
-```
-
----
-
-# 3. OTIMIZAÇÃO DO H1
-
-## Atual
-
-```html
-<h1>Nosso foco é movimentar as suas vendas</h1>
-```
-
-## Problema
-
-O H1 atual não possui palavras-chave estratégicas.
-
-## Sugestão
-
-```html
-<h1>
-Software B2B para força de vendas, representantes comerciais e franquias
-</h1>
-```
 
 ---
 
@@ -171,11 +104,16 @@ Substituir excesso de `<div>` por:
 
 ```html
 <header>
-<main>
-<section>
-<article>
-<nav>
-<footer>
+  <main>
+    <section>
+      <article>
+        <nav>
+          <footer></footer>
+        </nav>
+      </article>
+    </section>
+  </main>
+</header>
 ```
 
 ## Objetivo
@@ -196,6 +134,10 @@ Melhor compreensão do conteúdo pelos mecanismos de busca.
 
 - múltiplos H1
 - headings fora de ordem
+
+## Importante:
+
+- Não alterar o layout atual das headings, nem os tamanhos e cores
 
 ---
 
@@ -221,10 +163,8 @@ alt="Catálogo digital B2B para representantes comerciais"
 
 ## Implementar
 
-- formato WebP
 - compressão
 - lazy loading
-- tamanhos responsivos
 
 ## Exemplo
 
@@ -368,7 +308,6 @@ Evitar repetir:
 Adicionar:
 
 - depoimentos
-- logos de clientes
 - cases
 - métricas reais
 
@@ -441,7 +380,6 @@ Empresa especializada em software B2B e força de vendas no Paraná, atendendo c
 
 ## Performance
 
-- [ ] Converter imagens para WebP
 - [ ] Implementar lazy loading
 - [ ] Otimizar bundles JS
 - [ ] Melhorar Lighthouse
@@ -461,4 +399,3 @@ Empresa especializada em software B2B e força de vendas no Paraná, atendendo c
 ## Potencial de crescimento
 
 Muito alto devido à baixa concorrência SEO técnica no nicho B2B no Brasil.
-

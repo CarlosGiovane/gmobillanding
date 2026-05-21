@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(pip install *)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(Get-ChildItem -Path \"d:\\\\Repositorios\\\\gmobillanding\" -Recurse -Force)",
+      "Bash(Select-Object FullName)",
+      "Bash(ConvertTo-Csv -NoTypeInformation)",
+      "Bash(Format-List)"
     ]
   }
 }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carlosgiovane.github.io/gmobillanding/sitemap.xml
