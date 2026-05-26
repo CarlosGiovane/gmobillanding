@@ -6,7 +6,8 @@
       "Bash(Get-ChildItem -Path \"d:\\\\Repositorios\\\\gmobillanding\" -Recurse -Force)",
       "Bash(Select-Object FullName)",
       "Bash(ConvertTo-Csv -NoTypeInformation)",
-      "Bash(Format-List)"
+      "Bash(Format-List)",
+      "Bash(nslookup gmobil.com.br 8.8.8.8)"
     ]
   }
 }

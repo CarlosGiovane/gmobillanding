@@ -1,4 +1,4 @@
-# Plano de Ajustes SEO — GMÓBIL Landing Page
+﻿# Plano de Ajustes SEO — GMÓBIL Landing Page
 
 ## Objetivo
 
@@ -204,7 +204,7 @@ Adicionar:
 Adicionar:
 
 ```html
-<link rel="canonical" href="https://carlosgiovane.github.io/gmobillanding/" />
+<link rel="canonical" href="https://www.gmobil.com.br/" />
 ```
 
 ---
@@ -231,7 +231,7 @@ Criar:
 User-agent: *
 Allow: /
 
-Sitemap: https://carlosgiovane.github.io/gmobillanding/sitemap.xml
+Sitemap: https://www.gmobil.com.br/sitemap.xml
 ```
 
 ---
@@ -245,7 +245,7 @@ Adicionar estrutura:
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "GMÓBIL",
-  "url": "https://carlosgiovane.github.io/gmobillanding/"
+  "url": "https://www.gmobil.com.br/"
 }
 ```
 
