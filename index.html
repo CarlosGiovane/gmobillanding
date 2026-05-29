@@ -991,6 +991,12 @@
         opacity: 0.88;
         transform: translateY(-1px);
       }
+      .form-submit:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+        transform: none;
+      }
       .form-success {
         display: none;
         flex-direction: column;
@@ -3094,7 +3100,7 @@
         </div>
 
         <script type="text/javascript">
-            (function(){emailjs.init({publicKey:"uYfnlksCUO2B7Zgm7"});})();document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("demo-form");e&&e.addEventListener("submit",function(t){t.preventDefault(),emailjs.sendForm("service_gm","template_gmobil",this).then(()=>{e.style.display="none";const s=document.getElementById("demo-success");if(s)s.style.display="flex";}).catch(t=>alert("Erro: "+JSON.stringify(t)))})});</script>
+            (function(){emailjs.init({publicKey:"uYfnlksCUO2B7Zgm7"});})();document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("demo-form");e&&e.addEventListener("submit",function(t){t.preventDefault();const b=e.querySelector("button[type=submit]");if(b){b.disabled=true;b.textContent="Enviando...";}emailjs.sendForm("service_gm","template_gmobil",this).then(()=>{e.style.display="none";const s=document.getElementById("demo-success");if(s)s.style.display="flex";}).catch(t=>{if(b){b.disabled=false;b.textContent="Enviar Mensagem";}alert("Erro: "+JSON.stringify(t))})})});</script>
             
         <form class="modal-form" id="demo-form">
           <div class="form-row">
